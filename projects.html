@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos de Automatización QA | Diego Gonzales Soto</title>
+    <meta name="description" content="Explora el portafolio de proyectos de Diego Gonzales Soto: automatización de API, UI, testing de backend, CI/CD y más.">
+    <meta name="keywords" content="Proyectos QA, Automatización de Pruebas, Diego Gonzales Soto Portfolio, API Testing Projects, UI Automation Projects, Selenium Projects, Playwright Projects, PyTest Projects">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dgsoto.github.io/portfolio/projects.html">
+    <meta property="og:title" content="Proyectos de Automatización QA | Diego Gonzales Soto">
+    <meta property="og:description" content="Explora el portafolio de proyectos de Diego Gonzales Soto: automatización de API, UI, testing de backend, CI/CD y más.">
+    <meta property="og:image" content="https://dgsoto.github.io/portfolio/assets/images/personal/portada-diego-gonzales-soto-qa-manual-tester-and-automation.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://dgsoto.github.io/portfolio/projects.html">
+    <meta name="twitter:title" content="Proyectos de Automatización QA | Diego Gonzales Soto">
+    <meta name="twitter:description" content="Explora el portafolio de proyectos de Diego Gonzales Soto: automatización de API, UI, testing de backend, CI/CD y más.">
+    <meta name="twitter:image" content="https://dgsoto.github.io/portfolio/assets/images/personal/portada-diego-gonzales-soto-qa-manual-tester-and-automation.jpg">
+
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/theme-dark.css" id="theme-link"> 
+</head>
+<body class="dark-theme">
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="index.html" class="site-logo">Diego G.S.</a>
+            <ul class="nav-links">
+                <li><a href="about.html" data-lang-key="navAbout">Sobre Mí</a></li>
+                <li><a href="projects.html" data-lang-key="navProjects">Proyectos</a></li>
+                <li><a href="blog.html" data-lang-key="navBlog">Blog</a></li>
+                <li><a href="contact.html" data-lang-key="navContact">Contacto</a></li>
+                <li><a href="resume/Diego-Gonzales-Soto-Resume-QA-CV-Chile-EN.pdf" target="_blank" data-lang-key="navResume">CV</a></li>
+            </ul>
+            <div class="theme-switcher">
+                <button id="theme-toggle" aria-label="Cambiar Tema">🌙</button>
+            </div>
+            <div class="lang-switcher">
+                <select id="lang-select" aria-label="Seleccionar Idioma">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                    <option value="pt">Português</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="all-projects" class="section-padding">
+            <h1 data-lang-key="allProjectsTitle">Todos Mis Proyectos</h1>
+            <div class="projects-grid" id="all-projects-container">
+                <p data-lang-key="loadingProjects">Cargando proyectos...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> Diego Gonzales Soto. <span data-lang-key="footerRights">Todos los derechos reservados.</span></p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/diego-gonzales-soto/" target="_blank" aria-label="LinkedIn"><img src="assets/images/icons/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://github.com/dgsoto" target="_blank" aria-label="GitHub"><img src="assets/images/icons/github.svg" alt="GitHub"></a>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js" type="module" defer></script>
+    <script type="module">
+        import { renderProjects } from './assets/js/modules/projects.js';
+        import { getProjectsData } from './assets/js/data_es.js'; // Ajustaremos para multi-idioma
+        import { loadLanguageData, updateContentLanguage } from './assets/js/modules/lang.js';
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            const savedLang = localStorage.getItem('lang') || 'es';
+            await loadLanguageData(savedLang); // Carga los datos de idioma
+            updateContentLanguage(); // Actualiza el contenido con el idioma
+
+            const allProjectsContainer = document.getElementById('all-projects-container');
+            // Obtener todos los proyectos sin límite
+            renderProjects(getProjectsData(savedLang), 'all-projects-container'); 
+            
+            // Re-renderizar proyectos si el idioma cambia
+            document.getElementById('lang-select').addEventListener('change', async (event) => {
+                const newLang = event.target.value;
+                await loadLanguageData(newLang);
+                updateContentLanguage();
+                renderProjects(getProjectsData(newLang), 'all-projects-container');
+            });
+        });
+    </script>
+</body>
+</html>

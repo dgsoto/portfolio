@@ -1,0 +1,822 @@
+/* Variables CSS para temas */
+:root {
+    --primary-color: #007bff; /* Color para botones, etc. */
+    --text-color: #333;
+    --bg-color: #f4f7f6;
+    --card-bg: #fff;
+    --border-color: #ddd;
+    --header-bg: #fff;
+    --footer-bg: #333;
+    --footer-text-color: #fff;
+    --link-hover-color: #0056b3;
+}
+
+/* Tema Oscuro */
+.dark-theme {
+    --primary-color: #88c0d0; /* Nord light blue */
+    --text-color: #eceff4; /* Nord snow storm */
+    --bg-color: #2e3440; /* Nord dark blue */
+    --card-bg: #3b4252; /* Nord grey */
+    --border-color: #4c566a; /* Nord blue-grey */
+    --header-bg: #2e3440;
+    --footer-bg: #2e3440;
+    --footer-text-color: #eceff4;
+    --link-hover-color: #81a1c1; /* Nord darker blue */
+}
+
+/* Estilos Generales */
+body {
+    font-family: 'Inter', sans-serif; /* Usar una fuente moderna */
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.theme-switcher, .lang-switcher {
+    margin-left: 1rem;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+#lang-select {
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+.hero-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--bg-color);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.hero-content .subtitle {
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: var(--text-color);
+}
+
+.hero-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 1rem 0 2rem;
+    border: 5px solid var(--primary-color);
+}
+
+.hero-buttons .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: var(--link-hover-color);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.secondary-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.section-padding {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-padding h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.projects-grid, .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card, .blog-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid var(--border-color); /* Borde sutil */
+}
+
+.project-card:hover, .blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.project-card img, .blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.tags {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background-color: var(--border-color);
+    color: var(--text-color);
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.card-buttons {
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+.read-more-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.read-more-btn:hover {
+    background-color: var(--link-hover-color);
+}
+
+.site-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+.site-footer .social-links a {
+    margin: 0 0.5rem;
+}
+
+.site-footer .social-links img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); /* Para iconos blancos en fondo oscuro */
+}
+
+.center-text {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .theme-switcher, .lang-switcher {
+        margin-top: 1rem;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .projects-grid, .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+/* Estilos para la página de detalle del proyecto/blog */
+.project-detail-section, .article-detail-section {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 3rem;
+    margin-top: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.project-detail-section h1, .article-detail-section h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.project-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.project-main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.project-description-full p, .article-full-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.project-description-full h3, .article-full-content h3 {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.technologies-used .tags {
+    justify-content: center; /* Centrar tags en detalle */
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 200px; /* Altura fija para la galería */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery-image:hover {
+    transform: scale(1.02);
+}
+
+.project-actions, .article-actions {
+    text-align: center;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Responsividad para la página de detalle */
+@media (max-width: 768px) {
+    .project-detail-section, .article-detail-section {
+        padding: 1.5rem;
+    }
+
+    .project-detail-section h1, .article-detail-section h1 {
+        font-size: 2rem;
+    }
+
+    .project-description-full h3, .article-full-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .project-actions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+
+/* Estilos específicos para la página de detalle de artículo */
+.article-full-content {
+    /* Ya tienes .article-detail-section para el contenedor principal,
+       pero aquí puedes añadir estilos para el contenido interno. */
+}
+
+.article-full-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.article-full-content .article-meta {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    opacity: 0.7;
+}
+
+.article-main-image {
+    width: 100%;
+    height: 350px; /* Altura fija para imagen principal del artículo */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.article-full-content h2 {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.article-full-content h3 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+}
+
+.article-full-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.article-full-content ul, .article-full-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.article-full-content ul li, .article-full-content ol li {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para bloques de código */
+pre {
+    background-color: #282c34; /* Dark background for code */
+    color: #abb2bf; /* Light text color for code */
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto; /* Enable horizontal scrolling for long lines */
+    margin: 2rem 0;
+    font-family: 'Fira Code', 'JetBrains Mono', monospace; /* Monospaced font */
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+pre code {
+    display: block;
+    white-space: pre;
+}
+
+.article-tags {
+    margin-top: 2rem;
+    text-align: center; /* Centrar los tags del artículo */
+}
+
+.article-tags .tag {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin: 0.3rem;
+    display: inline-block;
+}
+
+/* Reglas de Responsividad */
+@media (max-width: 768px) {
+    .article-full-content h1 {
+        font-size: 2.2rem;
+    }
+    .article-full-content h2 {
+        font-size: 1.8rem;
+    }
+    .article-main-image {
+        height: 250px;
+    }
+}
+
+
+
+
+
+.about-section {
+    text-align: center;
+}
+
+.about-section h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column; /* Por defecto para móviles */
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    gap: 2rem;
+}
+
+.about-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.about-text {
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.about-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-text a:hover {
+    text-decoration: underline;
+}
+
+.skills-section {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 2.5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-category {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    border: 1px solid var(--border-color);
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.skill-category h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.skill-category h3 i { /* Para iconos si los añades, ej. font-awesome */
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+.skill-category ul {
+    list-style: none; /* Eliminar viñetas por defecto */
+    padding: 0;
+    margin: 0;
+}
+
+.skill-category ul li {
+    font-size: 1.05rem;
+    color: var(--text-color);
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem; /* Espacio para el icono personalizado */
+    position: relative;
+}
+
+.skill-category ul li::before {
+    content: '✓'; /* Puedes usar un icono SVG o Font Awesome aquí */
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row; /* En pantallas grandes, imagen y texto en fila */
+        text-align: left;
+    }
+
+    .about-image {
+        margin-right: 2rem;
+        flex-shrink: 0; /* Evita que la imagen se encoja */
+    }
+}
+
+
+
+
+
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto 4rem;
+}
+
+.contact-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.contact-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.contact-card h3 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact-card .btn {
+    width: 100%;
+    max-width: 200px; /* Limitar el ancho del botón en la tarjeta */
+    box-sizing: border-box; /* Incluir padding y border en el width */
+}
+
+.contact-form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.contact-form-container h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contact-form-container p {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: var(--bg-color); /* Un poco más claro que el fondo de la tarjeta */
+    color: var(--text-color);
+    box-sizing: border-box; /* Asegura que el padding no afecte el width total */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Permitir redimensionar verticalmente */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(var(--primary-color-rgb), 0.5); /* Asume que tienes --primary-color-rgb */
+}
+
+.contact-form .btn {
+    width: auto;
+    padding: 0.8rem 2rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.form-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .contact-methods {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+
+    .contact-card .btn {
+        max-width: none;
+    }
+}

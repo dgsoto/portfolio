@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de QA y Automatización | Diego Gonzales Soto</title>
+    <meta name="description" content="Lee los últimos artículos de blog de Diego Gonzales Soto sobre aseguramiento de calidad, automatización de pruebas, metodologías ágiles y consejos para QA.">
+    <meta name="keywords" content="Blog QA, Automatización, Test Automation Blog, Calidad de Software, Artículos QA, Diego Gonzales Soto Blog, Testing Tips">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dgsoto.github.io/portfolio/blog.html">
+    <meta property="og:title" content="Blog de QA y Automatización | Diego Gonzales Soto">
+    <meta property="og:description" content="Lee los últimos artículos de blog de Diego Gonzales Soto sobre aseguramiento de calidad, automatización de pruebas, metodologías ágiles y consejos para QA.">
+    <meta property="og:image" content="https://dgsoto.github.io/portfolio/assets/images/personal/portada-diego-gonzales-soto-qa-manual-tester-and-automation.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://dgsoto.github.io/portfolio/blog.html">
+    <meta name="twitter:title" content="Blog de QA y Automatización | Diego Gonzales Soto">
+    <meta name="twitter:description" content="Lee los últimos artículos de blog de Diego Gonzales Soto sobre aseguramiento de calidad, automatización de pruebas, metodologías ágiles y consejos para QA.">
+    <meta name="twitter:image" content="https://dgsoto.github.io/portfolio/assets/images/personal/portada-diego-gonzales-soto-qa-manual-tester-and-automation.jpg">
+
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/theme-dark.css" id="theme-link"> 
+</head>
+<body class="dark-theme">
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="index.html" class="site-logo">Diego G.S.</a>
+            <ul class="nav-links">
+                <li><a href="about.html" data-lang-key="navAbout">Sobre Mí</a></li>
+                <li><a href="projects.html" data-lang-key="navProjects">Proyectos</a></li>
+                <li><a href="blog.html" data-lang-key="navBlog">Blog</a></li>
+                <li><a href="contact.html" data-lang-key="navContact">Contacto</a></li>
+                <li><a href="resume/Diego-Gonzales-Soto-Resume-QA-CV-Chile-EN.pdf" target="_blank" data-lang-key="navResume">CV</a></li>
+            </ul>
+            <div class="theme-switcher">
+                <button id="theme-toggle" aria-label="Cambiar Tema">🌙</button>
+            </div>
+            <div class="lang-switcher">
+                <select id="lang-select" aria-label="Seleccionar Idioma">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                    <option value="pt">Português</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="all-blog-posts" class="section-padding">
+            <h1 data-lang-key="allBlogPostsTitle">Últimas Publicaciones del Blog</h1>
+            <div class="blog-grid" id="all-blog-container">
+                <p data-lang-key="loadingBlogPosts">Cargando publicaciones...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> Diego Gonzales Soto. <span data-lang-key="footerRights">Todos los derechos reservados.</span></p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/diego-gonzales-soto/" target="_blank" aria-label="LinkedIn"><img src="assets/images/icons/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://github.com/dgsoto" target="_blank" aria-label="GitHub"><img src="assets/images/icons/github.svg" alt="GitHub"></a>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js" type="module" defer></script>
+    <script type="module">
+        import { renderBlogPosts } from './assets/js/modules/blog.js';
+        import { getBlogData } from './assets/js/data_es.js'; // Ajustaremos para multi-idioma
+        import { loadLanguageData, updateContentLanguage } from './assets/js/modules/lang.js';
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            const savedLang = localStorage.getItem('lang') || 'es';
+            await loadLanguageData(savedLang);
+            updateContentLanguage();
+
+            const allBlogContainer = document.getElementById('all-blog-container');
+            // Obtener todos los blogs sin límite
+            renderBlogPosts(getBlogData(savedLang), 'all-blog-container');
+
+            // Re-renderizar blogs si el idioma cambia
+            document.getElementById('lang-select').addEventListener('change', async (event) => {
+                const newLang = event.target.value;
+                await loadLanguageData(newLang);
+                updateContentLanguage();
+                renderBlogPosts(getBlogData(newLang), 'all-blog-container');
+            });
+        });
+    </script>
+</body>
+</html>

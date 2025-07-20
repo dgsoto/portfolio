@@ -1,125 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Diego Gonzales Soto - QA Engineer with expertise in Manual Testing, Automation Testing, and API Testing. Proficient in Python, PyTest, Jira, and Jenkins.">
-  <meta name="keywords" content="QA Engineer, Manual Testing, Automation Testing, API Testing, Python, PyTest, Jira, Jenkins, Agile Testing, Software Quality Assurance, Cypress">
-  <meta name="author" content="Diego Gonzales Soto">
-  <meta property="og:title" content="Diego Gonzales Soto - QA Engineer Portfolio">
-  <meta property="og:description" content="Explore my professional QA portfolio showcasing expertise in Manual Testing, Automation Testing, and API Testing.">
-  <meta property="og:image" content="assets/portfolio-thumbnail.png">
-  <meta property="og:url" content="https://dgsoto.github.io/portfolio">
-  <link rel="canonical" href="https://dgsoto.github.io/portfolio">
+<html lang="es"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Gonzales Soto | QA & Automation Engineer | Portafolio Oficial</title>
+    <meta name="description" content="Diego Gonzales Soto: Ingeniero QA y experto en automatización. Descubre mi portafolio de proyectos de testing de API/UI, CI/CD y mi blog de calidad de software.">
+    <meta name="keywords" content="QA Engineer, Automation Engineer, Diego Gonzales Soto, Test Automation, Selenium, Playwright, PyTest, API Testing, Web Testing, Software Quality, CI/CD, Manual Tester">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dgsoto.github.io/portfolio/">
+    <meta property="og:title" content="Diego Gonzales Soto | QA & Automation Engineer | Portafolio Oficial">
+    <meta property="og:description" content="Diego Gonzales Soto: Ingeniero QA y experto en automatización. Descubre mi portafolio de proyectos de testing de API/UI, CI/CD y mi blog de calidad de software.">
+    <meta property="og:image" content="https://dgsoto.github.io/portfolio/assets/images/personal/perfil-diego-gonzales-soto-quality-assurance-engineer.jpg">
 
-  <title>QA Engineer Portfolio | Manual & Automation Testing</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://dgsoto.github.io/portfolio/">
+    <meta name="twitter:title" content="Diego Gonzales Soto | QA & Automation Engineer | Portafolio Oficial">
+    <meta name="twitter:description" content="Diego Gonzales Soto: Ingeniero QA y experto en automatización. Descubre mi portafolio de proyectos de testing de API/UI, CI/CD y mi blog de calidad de software.">
+    <meta name="twitter:image" content="https://dgsoto.github.io/portfolio/assets/images/personal/perfil-diego-gonzales-soto-quality-assurance-engineer.jpg">
+
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/theme-dark.css" id="theme-link"> 
 </head>
-<body>
-  <!-- Header Section -->
-  <header class="header">
-    <div class="container">
-      <h1>Diego Gonzales Soto</h1>
-      <p>QA Engineer | Expert in Manual & Automation Testing | API Testing</p>
-      <a href="#contact" class="cta-button">Contact Me</a>
-    </div>
-  </header>
+<body class="dark-theme"> <header class="site-header">
+        <nav class="main-nav">
+            <a href="index.html" class="site-logo">Diego G.S.</a>
+            <ul class="nav-links">
+                <li><a href="about.html" data-lang-key="navAbout">Sobre Mí</a></li>
+                <li><a href="projects.html" data-lang-key="navProjects">Proyectos</a></li>
+                <li><a href="blog.html" data-lang-key="navBlog">Blog</a></li>
+                <li><a href="contact.html" data-lang-key="navContact">Contacto</a></li>
+                <li><a href="resume/Diego-Gonzales-Soto -Resume-QA-CV-Chile-EN.pdf" target="_blank" data-lang-key="navResume">CV</a></li>
+            </ul>
+            <div class="theme-switcher">
+                <button id="theme-toggle" aria-label="Cambiar Tema">🌙</button>
+            </div>
+            <div class="lang-switcher">
+                <select id="lang-select" aria-label="Seleccionar Idioma">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                    <option value="pt">Português</option>
+                </select>
+            </div>
+        </nav>
+    </header>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I am a Quality Assurance Engineer with over 5 years of experience in software testing and automation. I specialize in API testing, web application testing, and implementing automation solutions to streamline testing processes. My expertise includes tools like Jira, Postman, PyTest, and Jenkins, and I have collaborated with international teams to ensure high-quality software delivery.</p>
-      <ul class="skills-list">
-        <li>Manual Testing</li>
-        <li>Automation Testing (Python, PyTest)</li>
-        <li>API Testing (Postman, RestAssured)</li>
-        <li>CI/CD Integration (Jenkins, GitLab CI)</li>
-        <li>Agile Methodologies</li>
-      </ul>
-    </div>
-  </section>
+    <main class="main-content">
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1 data-lang-key="heroTitle">Hola, soy Diego Gonzales Soto</h1>
+                <p class="subtitle" data-lang-key="heroSubtitle">Ingeniero QA & Especialista en Automatización</p>
+                <img src="assets/images/personal/perfil-diego-gonzales-soto-quality-assurance-engineer.jpg" alt="Diego Gonzales Soto - QA & Automation Engineer" class="hero-image">
+                <p data-lang-key="heroDescription">Apasionado por la **calidad del software**, la **automatización de pruebas** y la creación de procesos de testing eficientes. Mi objetivo es garantizar productos robustos y confiables a nivel global.</p>
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn primary-btn" data-lang-key="viewProjects">Ver Proyectos</a>
+                    <a href="contact.html" class="btn secondary-btn" data-lang-key="contactMe">Contactar</a>
+                </div>
+            </div>
+        </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="section">
-    <div class="container">
-      <h2>Portfolio</h2>
-      <div class="project">
-        <h3>Project 1: eCommerce Automation</h3>
-        <p>Automated functional tests for an eCommerce platform using Selenium WebDriver and TestNG.</p>
-        <a href="https://github.com/tuusuario/eCommerce-Automation" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project">
-        <h3>Project 2: API Testing</h3>
-        <p>Developed automated API tests using Postman and RestAssured to validate endpoints.</p>
-        <a href="https://github.com/tuusuario/API-Testing" target="_blank">View on GitHub</a>
-      </div>
+        <section id="featured-projects" class="section-padding">
+            <h2 data-lang-key="featuredProjectsTitle">Proyectos Destacados</h2>
+            <div class="projects-grid" id="projects-container">
+                </div>
+            <div class="center-text">
+                <a href="projects.html" class="btn secondary-btn" data-lang-key="allProjects">Ver Todos los Proyectos</a>
+            </div>
+        </section>
 
-      <!-- Proyecto 1 -->
-      <div class="project">
-        <h3>API Automation for Snapshot/Cross-Region Copy</h3>
-        <p>Automated API processes for deploying snapshot/cross-region copy features using Python and PyTest. Collaborated with international teams to ensure product quality.</p>
-        <a href="https://github.com/diego-gonzales-soto/api-automation" target="_blank">View on GitHub</a>
-      </div>
-      <!-- Proyecto 2 -->
-      <div class="project">
-        <h3>Web Testing for Cloud Object Storage</h3>
-        <p>Conducted black-box testing on web applications to ensure functionality and usability across different browsers. Used tools like Jira, Jenkins, and BrowserStack.</p>
-        <a href="https://github.com/diego-gonzales-soto/web-testing" target="_blank">View on GitHub</a>
-      </div>
-    </div>
-  </section>
+        <section id="latest-blog-posts" class="section-padding bg-light-theme">
+            <h2 data-lang-key="latestBlogPostsTitle">Últimas Publicaciones del Blog</h2>
+            <div class="blog-grid" id="blog-container">
+                </div>
+            <div class="center-text">
+                <a href="blog.html" class="btn secondary-btn" data-lang-key="allBlogPosts">Ir al Blog</a>
+            </div>
+        </section>
+    </main>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h4>Programming</h4>
-          <p>Python, Shell, PHP, HTML/CSS</p>
-        </div>
-        <div class="skill-card">
-          <h4>Automation Tools</h4>
-          <p>PyTest, Selenium, Jenkins</p>
-        </div>
-        <div class="skill-card">
-          <h4>Testing Techniques</h4>
-          <p>API Testing, Functional Testing, Regression Testing</p>
-        </div>
-        <div class="skill-card">
-          <h4>Project Management</h4>
-          <p>Jira, TestRail, GitHub</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> Diego Gonzales Soto. <span data-lang-key="footerRights">Todos los derechos reservados.</span></p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/diego-gonzales-soto/" target="_blank" aria-label="LinkedIn"><img src="assets/images/icons/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://github.com/dgsoto" target="_blank" aria-label="GitHub"><img src="assets/images/icons/github.svg" alt="GitHub"></a>
+            </div>
+    </footer>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form id="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit" class="cta-button">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2023 Tu Nombre. All rights reserved.</p>
-      <div class="social-links">
-        <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
-        <a href="https://github.com/tuusuario" target="_blank">GitHub</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="assets/js/script.js"></script>
+    <script src="assets/js/main.js" type="module" defer></script>
 </body>
 </html>
