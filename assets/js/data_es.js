@@ -7,16 +7,16 @@ export const languageData = {
     navResume: "Descargar CV",
 
     aboutTitle: "Sobre Mí",
-    aboutParagraph1: "¡Hola! Soy **Diego Gonzales Soto**, un apasionado y experimentado **Ingeniero QA y Especialista en Automatización de Pruebas** con una trayectoria sólida en el mundo del desarrollo de software. Mi misión es garantizar que los productos digitales no solo funcionen, sino que lo hagan de manera impecable, ofreciendo la mejor experiencia al usuario final.",
-    aboutParagraph2: "Cuento con amplia experiencia en la creación y mantenimiento de frameworks de automatización de pruebas para APIs y UIs web/móviles, utilizando tecnologías como **Python (PyTest, Selenium), JavaScript (Playwright, Cypress)**. Mi enfoque se centra en la integración continua (CI/CD), la optimización de procesos de testing y la implementación de estrategias de calidad que se alineen con metodologías ágiles.",
-    aboutParagraph3: "Más allá de la automatización, soy un firme creyente en la importancia del **testing manual exploratorio y de usabilidad** para descubrir defectos sutiles y asegurar una calidad integral. Siempre estoy en la búsqueda de nuevas herramientas y metodologías para mejorar la eficiencia y la efectividad de las pruebas.",
+    aboutParagraph1: "¡Hola! Soy Diego Gonzales Soto, un apasionado y experimentado Ingeniero QA y Especialista en Automatización de Pruebas con una trayectoria sólida en el mundo del desarrollo de software. Mi misión es garantizar que los productos digitales no solo funcionen, sino que lo hagan de manera impecable, ofreciendo la mejor experiencia al usuario final.",
+    aboutParagraph2: "Cuento con amplia experiencia en la creación y mantenimiento de frameworks de automatización de pruebas para APIs y UIs web/móviles, utilizando tecnologías como Python (PyTest, Selenium), JavaScript (Playwright, Cypress). Mi enfoque se centra en la integración continua (CI/CD), la optimización de procesos de testing y la implementación de estrategias de calidad que se alineen con metodologías ágiles.",
+    aboutParagraph3: "Más allá de la automatización, soy un firme creyente en la importancia del testing manual exploratorio y de usabilidad para descubrir defectos sutiles y asegurar una calidad integral. Siempre estoy en la búsqueda de nuevas herramientas y metodologías para mejorar la eficiencia y la efectividad de las pruebas.",
     aboutParagraph4: "Si buscas a un profesional proactivo, meticuloso y con una fuerte orientación a la calidad para tu equipo, no dudes en <a href='contact.html'>contactarme</a>. ¡Estaré encantado de colaborar en tu próximo desafío!",
     aboutContactLink: "contactarme", // Solo si quieres traducir el texto del enlace en el párrafo
     skillsTitle: "Mis Habilidades Clave",
 
     heroTitle: "Hola, soy Diego Gonzales Soto",
     heroSubtitle: "Ingeniero QA & Especialista en Automatización",
-    heroDescription: "Apasionado por la **calidad del software**, la **automatización de pruebas** y la creación de procesos de testing eficientes. Mi objetivo es garantizar productos robustos y confiables a nivel global.",
+    heroDescription: "Apasionado por la calidad del software, la automatización de pruebas y la creación de procesos de testing eficientes. Mi objetivo es garantizar productos robustos y confiables a nivel global.",
     viewProjects: "Ver Proyectos",
     contactMe: "Contactar",
     featuredProjectsTitle: "Proyectos Destacados",
